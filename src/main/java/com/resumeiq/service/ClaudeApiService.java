@@ -8,8 +8,10 @@ import java.net.http.*;
 @Service
 public class ClaudeApiService {
 
-    @Value("${claude.api.key}")
-    private String apiKey;
+    
+
+    @Value("${GROQ_API_KEY}")
+private String apiKey;
 
     public String analyzeResume(String resumeText, String jobDescription) throws Exception {
 
