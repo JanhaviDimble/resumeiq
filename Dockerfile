@@ -1,4 +1,3 @@
-
 FROM eclipse-temurin:17-jdk-alpine
 WORKDIR /app
 COPY .mvn/ .mvn
@@ -8,4 +7,4 @@ RUN ./mvnw dependency:go-offline
 COPY src ./src
 RUN ./mvnw clean package -DskipTests
 EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "target/resumeIQ-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java", "-jar", "target/resumeiq-backend-0.0.1-SNAPSHOT.jar"]
